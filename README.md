@@ -46,7 +46,7 @@ Esta función se encarga de analizar un puerto específico en el host objetivo.
   - Si la conexión es exitosa, el puerto se considera **abierto**.
   - Los resultados del escaneo (abierto/cerrado) se escriben en el archivo `resultados.txt`.
 
-```
+```Go
 func scanPort(host string, port int, results *os.File) {
 	address := fmt.Sprintf("%s:%d", host, port)
 	conn, err := net.DialTimeout("tcp", address, 1*time.Second)
@@ -78,7 +78,7 @@ Este es el punto de entrada del programa y gestiona la interacción con el usuar
 4. **Finalización del programa:**
    - Al completar el escaneo, informa al usuario que los resultados se han guardado.
 
-```
+```Go
 func main() {
 	var host string
 	var startPort, endPort int
@@ -129,7 +129,7 @@ El programa utiliza un bucle `for` que itera desde el puerto inicial (`startPort
 - Llama a la función `scanPort`.
 - Escribe los resultados en el archivo.
 
-```
+```Go
 for port := startPort; port <= endPort; port++ {
 		scanPort(host, port, results)
 	}
