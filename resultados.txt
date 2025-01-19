@@ -1,0 +1,4 @@
+[-] Puerto 137 cerrado
+[-] Puerto 138 cerrado
+[+] Puerto 139 abierto
+[-] Puerto 140 cerrado
