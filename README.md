@@ -19,7 +19,7 @@ El código importa las siguientes librerías estándar de Go:
 - `os`: Para manejar la creación y escritura de archivos.
 - `time`: Para controlar los tiempos de espera en las conexiones.
 
-```
+```Go
 package main
 import (
 	"fmt"
